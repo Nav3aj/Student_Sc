@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #050f0f;
+  background-image:
+    linear-gradient(rgba(0, 255, 180, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 180, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  min-height: 100vh;
+}
+
+.app {
+  font-family: 'Share Tech Mono', monospace;
+  color: #a0c4b8;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header-sub {
+  color: #00e5a0;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-sub::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #00e5a0;
+}
+
+.header-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 30px rgba(0, 229, 160, 0.4);
+  line-height: 1;
+}
+
+.header-title span {
+  color: #00e5a0;
+}
+
+.header-line {
+  height: 1px;
+  background: linear-gradient(90deg, #00e5a0, transparent);
+  margin-top: 1rem;
+}
+
+
+.form-panel,
+.table-panel {
+  background: rgba(0, 20, 15, 0.8);
+  border: 1px solid rgba(0, 229, 160, 0.15);
+  border-radius: 4px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.panel-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #00e5a0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.panel-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00e5a0;
+  display: inline-block;
+}
+
+.panel-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #3a6658;
+}
+
+
+.add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+}
+
+.form-input {
+  background: rgba(0, 255, 180, 0.04);
+  border: 1px solid rgba(0, 229, 160, 0.2);
+  color: #a0c4b8;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 2px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-input:focus {
+  border-color: #00e5a0;
+  color: #fff;
+}
+
+.form-input::placeholder {
+  color: #2a4a40;
+}
+
+.add-btn {
+  background: transparent;
+  border: 1px solid #00e5a0;
+  color: #00e5a0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.add-btn:hover {
+  background: #00e5a0;
+  color: #050f0f;
+}
+
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.stat-card {
+  background: rgba(0, 20, 15, 0.8);
+  border: 1px solid rgba(0, 229, 160, 0.15);
+  border-radius: 4px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #3a6658;
+}
+
+.stat-value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00e5a0;
+}
+
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #3a6658;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 229, 160, 0.1);
+}
+
+.student-row {
+  border-bottom: 1px solid rgba(0, 229, 160, 0.07);
+  position: relative;
+}
+
+.student-row td {
+  padding: 12px 12px;
+  vertical-align: middle;
+}
+
+
+.row-pass::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #00e5a0;
+}
+
+
+.row-fail::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #ff4444;
+}
+
+.student-name {
+  font-weight: bold;
+  color: #e0f0ea;
+  font-size: 14px;
+}
+
+.score-pass {
+  color: #f0a500;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.score-fail {
+  color: #ff6644;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.status-badge {
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 5px 12px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.badge-pass {
+  background: rgba(0, 229, 160, 0.1);
+  border: 1px solid #00e5a0;
+  color: #00e5a0;
+}
+
+.badge-pass::before {
+  background: #00e5a0;
+}
+
+.badge-fail {
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid #ff4444;
+  color: #ff4444;
+}
+
+.badge-fail::before {
+  background: #ff4444;
+}
+
+.update-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.score-input {
+  background: rgba(0, 255, 180, 0.04);
+  border: 1px solid rgba(0, 229, 160, 0.2);
+  color: #a0c4b8;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  width: 70px;
+  outline: none;
+}
+
+.score-input:focus {
+  border-color: #00e5a0;
+  color: #fff;
+}
+
+.save-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 229, 160, 0.3);
+  color: #3a6658;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.save-btn:hover {
+  border-color: #00e5a0;
+  color: #00e5a0;
+}
